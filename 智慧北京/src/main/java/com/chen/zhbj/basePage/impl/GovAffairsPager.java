@@ -1,4 +1,4 @@
-package com.chen.zhbj.base.impl;
+package com.chen.zhbj.basePage.impl;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -6,7 +6,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import com.chen.zhbj.base.BasePager;
+import com.chen.zhbj.basePage.BasePager;
 
 /**
  * Created by Administrator on 2016/11/29 0029.

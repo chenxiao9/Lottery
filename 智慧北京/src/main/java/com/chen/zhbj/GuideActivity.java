@@ -1,7 +1,6 @@
 package com.chen.zhbj;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -14,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.chen.zhbj.utils.PrefUtils;
+import com.chen.zhbj.util.PrefUtils;
 
 import java.util.ArrayList;
 

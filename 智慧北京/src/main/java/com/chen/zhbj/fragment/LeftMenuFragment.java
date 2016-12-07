@@ -14,4 +14,5 @@ public class LeftMenuFragment extends BaseFragment {
         View view=View.inflate(mActivity, R.layout.fragment_left_menu,null);
         return view;
     }
+
 }

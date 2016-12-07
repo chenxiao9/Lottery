@@ -1,4 +1,4 @@
-package com.chen.zhbj.base;
+package com.chen.zhbj.basePage;
 
 /**
  * Created by Administrator on 2016/11/29 0029.
@@ -8,8 +8,10 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chen.zhbj.AppContext;
 import com.chen.zhbj.MainActivity;
 import com.chen.zhbj.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -35,16 +37,18 @@ public class BasePager {
     public BasePager(Activity activity) {
         this.mActivity = activity;
 
-        initViews();
-//        initData();
+        addViews();
     }
 
     /**
      * 初始化布局
      */
-    public void initViews() {
+    public void addViews() {
         rootView = View.inflate(mActivity, R.layout.layout_base_page, null);
-        ButterKnife.bind(this, rootView);
+//        ButterKnife.bind(this, rootView);
+        ivMenu=(ImageButton)rootView.findViewById(R.id.iv_menu);
+        tvTitle=(TextView)rootView.findViewById(R.id.tv_title);
+        flPageContent=(FrameLayout)rootView.findViewById(R.id.fl_page_content);
     }
 
     /**

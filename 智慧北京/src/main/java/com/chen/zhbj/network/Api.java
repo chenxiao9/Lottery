@@ -1,4 +1,4 @@
-package com.chen.zhbj.utils;
+package com.chen.zhbj.network;
 
 /**
  * Created by lizhaotailang on 2016/3/18.
@@ -6,6 +6,16 @@ package com.chen.zhbj.utils;
  * this class contain the main APIs
  */
 public class Api {
+    public static final String BASE_URL = "http://";
+
+    public static final String SPILT = "/";
+    public static final String BEFORE = "before";
+    public static final String LAST = "latest";
+
+    public static final String ZHIHU = "news-at.zhihu.com/api/4/news";
+
+    //http://news-at.zhihu.com/api/4/news/
+    public static final String ZHIHU_BASE = BASE_URL+ZHIHU+SPILT;
 
     // 所有的知乎日报API的HTTP METHOD 均为GET
     // the method of all zhihu daily's api is GET
@@ -29,7 +39,11 @@ public class Api {
     // content of post and download offline
     // 在最新消息中获取到的id，拼接到这个NEWS之后，可以获得对应的JSON格式的内容
     // add the id that you got from latest post to ZHIHU_NEWS and you will get the content as json format
-    public static final String ZHIHU_NEWS = "http://news-at.zhihu.com/api/4/news/";
+//    public static final String ZHIHU_NEWS = "http://news-at.zhihu.com/api/4/news/";
+    public static final String ZHIHU_NEWS = BASE_URL + ZHIHU + SPILT;
+    //"http://news-at.zhihu.com/api/4/news/latest";
+    public static final String ZHIHU_LAST = BASE_URL + ZHIHU + SPILT + LAST + SPILT;
+
 
     // 过往消息
     // past posts
@@ -37,7 +51,8 @@ public class Api {
     // if you want to select the posts of November 11th, the number after 'before' should be 20161118
     // 知乎日报的生日为2013 年 5 月 19 日，如果before后面的数字小于20130520，那么只能获取到空消息
     // the birthday of ZhiHuDaily is May 19th, 2013. So if the number is lower than 20130520, you will get a null value of post
-    public static final String ZHIHU_HISTORY = "http://news.at.zhihu.com/api/4/news/before/";
+    //public static final String ZHIHU_HISTORY = "http://news.at.zhihu.com/api/4/news/before/";
+    public static final String ZHIHU_HISTORY = BASE_URL + ZHIHU + SPILT + BEFORE + SPILT;
 
     // 新闻额外消息
     // extra content of post

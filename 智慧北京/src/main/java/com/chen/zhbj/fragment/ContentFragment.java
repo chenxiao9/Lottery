@@ -1,22 +1,19 @@
 package com.chen.zhbj.fragment;
 
-import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 import com.chen.zhbj.R;
-import com.chen.zhbj.base.BasePager;
-import com.chen.zhbj.base.impl.GovAffairsPager;
-import com.chen.zhbj.base.impl.HomePager;
-import com.chen.zhbj.base.impl.NewsCenterPager;
-import com.chen.zhbj.base.impl.SettingPager;
-import com.chen.zhbj.base.impl.SmartServicePager;
+import com.chen.zhbj.basePage.BasePager;
+import com.chen.zhbj.basePage.impl.GovAffairsPager;
+import com.chen.zhbj.basePage.impl.HomePager;
+import com.chen.zhbj.basePage.impl.NewsCenterPager;
+import com.chen.zhbj.basePage.impl.SettingPager;
+import com.chen.zhbj.basePage.impl.SmartServicePager;
 
-import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +37,9 @@ public class ContentFragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(mActivity, R.layout.fragment_content, null);
+//        ButterKnife.bind(this,view);
+        rgGroup = (RadioGroup) view.findViewById(R.id.rg_group);
+        vpContent = (ViewPager) view.findViewById(R.id.vp_content);
         return view;
     }
 
@@ -80,19 +80,19 @@ public class ContentFragment extends BaseFragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.rb_home:
-                        vpContent.setCurrentItem(0,false);
+                        vpContent.setCurrentItem(0, false);
                         break;
                     case R.id.rb_news:
-                        vpContent.setCurrentItem(1,false);
+                        vpContent.setCurrentItem(1, false);
                         break;
                     case R.id.rb_smart:
-                        vpContent.setCurrentItem(2,false);
+                        vpContent.setCurrentItem(2, false);
                         break;
                     case R.id.rb_gov:
-                        vpContent.setCurrentItem(3,false);
+                        vpContent.setCurrentItem(3, false);
                         break;
                     case R.id.rb_setting:
-                        vpContent.setCurrentItem(4,false);
+                        vpContent.setCurrentItem(4, false);
                         break;
                 }
             }

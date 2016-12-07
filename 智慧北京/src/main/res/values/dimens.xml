@@ -5,5 +5,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="point_width">10dp</dimen>
     <dimen name="point_height">10dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="app_bar_height">240dp</dimen>
 
 </resources>

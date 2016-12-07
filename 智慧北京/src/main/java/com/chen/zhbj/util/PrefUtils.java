@@ -1,4 +1,4 @@
-package com.chen.zhbj.utils;
+package com.chen.zhbj.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

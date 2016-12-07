@@ -4,14 +4,13 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.chen.zhbj.utils.PrefUtils;
+import com.chen.zhbj.util.PrefUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,8 +28,9 @@ public class SplashActivity extends AppCompatActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题
         setContentView(R.layout.activity_splash);
-        ButterKnife.bind(this);
-
+//        ButterKnife.bind(this);
+        activitySplash=(RelativeLayout)findViewById(R.id.activity_splash);
+        imgSplash=(ImageView)findViewById(R.id.img_splash);
         startAni();
     }
 
