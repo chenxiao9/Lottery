@@ -46,6 +46,15 @@ public class NewsCenterModel implements NewsCenterContract.Model{
     }
 
     @Override
+    public void getHistory(String date){
+        sub.unsubscribe();
+        observable = AppContext.getInstance().service.getZhiHuHistory(date);
+        sub=observable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(observer);
+    }
+
+    @Override
     public void onFailure() {
 
     }

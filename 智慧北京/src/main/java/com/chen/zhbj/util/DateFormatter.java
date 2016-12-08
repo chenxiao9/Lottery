@@ -10,13 +10,14 @@ import java.util.Date;
 public class DateFormatter {
 
     /**
+     * 返回前一天的时间
      * 将long类date转换为String类型
      * @param date date
      * @return String date
      */
     public String ZhihuDailyDateFormat(long date) {
         String sDate;
-        Date d = new Date(date + 24*60*60*1000);
+        Date d = new Date(date - 24*60*60*1000);
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
         sDate = format.format(d);
 
@@ -30,6 +31,11 @@ public class DateFormatter {
         sDate = format.format(d);
 
         return sDate;
+    }
+
+    public Date getYesterDay(Date today){
+        Date yesterDay=new Date(today.getTime()-24*60*60*1000);
+        return yesterDay;
     }
 
 }

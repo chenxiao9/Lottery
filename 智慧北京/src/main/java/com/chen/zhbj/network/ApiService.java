@@ -20,4 +20,6 @@ public interface ApiService {
     Observable<ZhihuDailyNews> getZhiHuNews();
     @GET("{id}")
     Observable<ZhihuDailyStory> getZhiHuDetail(@Path ("id") int id);
+    @GET("before/{date}")
+    Observable<ZhihuDailyNews> getZhiHuHistory(@Path ("date") String date);
 }
