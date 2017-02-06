@@ -18,6 +18,8 @@ import com.chen.zhbj.interfaze.OnRecyclerViewOnClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.ButterKnife;
 
 /**
@@ -34,6 +36,7 @@ public class ZhihuDailyNewsAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     private static final int TYPE_ITEM = 0;
     private static final int TYPE_FOOTER = 1;
 
+    @Inject
     public ZhihuDailyNewsAdapter(Context context, List<ZhihuDailyNews.StoriesBean> list){
         this.context = context;
         this.list = list;

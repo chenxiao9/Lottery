@@ -27,6 +27,8 @@ import com.chen.zhbj.interfaze.OnRecyclerViewOnClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -50,6 +52,8 @@ public class NewsCenterPager extends BasePager implements NewsCenterContract.Vie
     private LinearLayoutManager mLayoutManager;
     private ZhihuDailyNewsAdapter adapter;
     private List<ImageView> imageList;
+
+    private List<ZhihuDailyNews.TopStoriesBean> tops;
     /**
      * 上一个页面的位置
      */
@@ -114,18 +118,14 @@ public class NewsCenterPager extends BasePager implements NewsCenterContract.Vie
                 if (newState == RecyclerView.SCROLL_STATE_IDLE
                         && lastVisibleItem + 1 == adapter.getItemCount()) {
                     // 此处在现实项目中，请换成网络请求数据代码，sendRequest .....
-                    //
                     presenter.onRefresh();
                 }
             }
         });
 
-
-
         adapter=new ZhihuDailyNewsAdapter(mActivity,list);
         adapter.setItemClickListener(this);
         ryvNewsCenter.setAdapter(adapter);
-
     }
 
     @Override
@@ -163,6 +163,7 @@ public class NewsCenterPager extends BasePager implements NewsCenterContract.Vie
 
     @Override
     public void showTop(List<ZhihuDailyNews.TopStoriesBean> topList) {
+        tops=topList;
         imageList = new ArrayList<>();int count=topList.size();
 
         for (int i=0;i<count; i++) {
@@ -235,6 +236,7 @@ public class NewsCenterPager extends BasePager implements NewsCenterContract.Vie
             }
         });
 
+
         /**
          * 自动循环
          * 1，定时器Timer
@@ -299,6 +301,11 @@ public class NewsCenterPager extends BasePager implements NewsCenterContract.Vie
             //super.destroyItem(container, position, object);
             container.removeView((View) object);
             object = null;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tops.get(position).getTitle();
         }
     }
 
