@@ -5,10 +5,12 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-3.2" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/mvpmaterial" />
             <option value="$PROJECT_DIR$/手机彩票" />
             <option value="$PROJECT_DIR$/智慧北京" />
           </set>

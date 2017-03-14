@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Lottery.iml" filepath="$PROJECT_DIR$/Lottery.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/lib.iml" filepath="$PROJECT_DIR$/library/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpmaterial/mvpmaterial.iml" filepath="$PROJECT_DIR$/mvpmaterial/mvpmaterial.iml" />
       <module fileurl="file://$PROJECT_DIR$/手机彩票/手机彩票.iml" filepath="$PROJECT_DIR$/手机彩票/手机彩票.iml" />
       <module fileurl="file://$PROJECT_DIR$/智慧北京/智慧北京.iml" filepath="$PROJECT_DIR$/智慧北京/智慧北京.iml" />
     </modules>

@@ -1,2 +1,2 @@
-include ':手机彩票', ':智慧北京', ':lib'
+include ':手机彩票', ':智慧北京', ':lib', ':mvpmaterial'
 project(':lib').projectDir = new File('library')
