@@ -2,24 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.chen.mvpmaterial">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".AndroidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".FruitActivity"
+            android:label="@string/title_activity_fruit"
+            android:theme="@style/FruitActivityTheme" />
+        <activity android:name=".module.home.HomeActivity" />
+        <activity android:name=".module.manage.setting.SettingsActivity" />
+        <activity android:name=".module.manage.download.DownloadActivity" />
+        <activity android:name=".module.news.special.SpecialActivity" />
+        <activity android:name=".module.home.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FruitActivity"
-            android:label="@string/title_activity_fruit"
-            android:theme="@style/FruitActivityTheme"/>
+        <activity android:name=".module.news.article.NewsArticleActivity" />
+        <activity android:name=".module.news.photoset.PhotoSetActivity" />
+        <activity android:name=".module.news.channel.ChannelActivity"></activity>
     </application>
 
 </manifest>
